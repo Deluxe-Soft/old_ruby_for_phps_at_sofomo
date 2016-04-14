@@ -1,0 +1,32 @@
+ruby -v
+Sprawdzamy
+------
+Jesli nie zainstalowany =>
+rvm list
+
+------
+rm Gemfile.lock (o ile jest)
+
+rvm install ruby -v 2.1.3 #(jesli nie ma)
+rvm --default use 2.1.3 -------
+
+rvm --create use 2.1.3@cie_global --rvmrc
+
+
+rvm gemset empty cie_global # (o ile byl wczesniej)
+
+bundle config build.nokogiri --use-system-libraries
+bundle install
+
+
+------
+ rvm gemset copy 2.1.3@global_cie 2.1.3@supa_sexi_feat
+ 
+-----
+
+rvm use @supa_sexi_feat
+
+rvm gemset delete supa_sex_feat
+bundle install --without global
+ 
+ 
